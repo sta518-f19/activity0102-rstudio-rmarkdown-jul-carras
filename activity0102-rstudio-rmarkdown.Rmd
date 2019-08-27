@@ -15,7 +15,7 @@ library(datasauRus)
 
 ### Exercise 1
 
-(Type your answer to Exercise 1 here. This exercise does not require any R code.)
+According to the helpfile, the datasaurus_dozen dataset has 1,846 records and 3 variables - x, y, and dataset.
 
 ### Exercise 2
 
