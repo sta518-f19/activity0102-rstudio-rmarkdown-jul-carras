@@ -19,7 +19,7 @@ According to the helpfile, the datasaurus_dozen dataset has 1,846 records and 3 
 
 ### Exercise 2
 
-First let's plot the data in the dino dataset:
+First let's plot the data in the **dino** dataset:
 
 ```{r plot-dino, fig.height=3, fig.width=6}
 dino_data <- datasaurus_dozen %>%
@@ -38,7 +38,7 @@ dino_data %>%
 
 ### Exercise 3
 
-Ok, let's try this again for the star dataset!
+Ok, let's try this again for the **star** dataset!
 
 ```{r plot-star, fig.height=3, fig.width=6}
 star_data <- datasaurus_dozen %>%
@@ -55,17 +55,28 @@ star_data %>%
   summarize(r = cor(x, y))
 ```
 
+It looks like we have very similar correlation stats, but very different observations.
+
 ### Exercise 4
 
-(Add code and narrative as needed. Note that two R chunks are given but they are not labeled. Use the convention from above to name them appropriately.)
+Ok, let's try this again for the **circle** dataset!
 
-```{r}
+```{r plot-star, fig.height=3, fig.width=6}
+circle_data <- datasaurus_dozen %>%
+  filter(dataset == "circle")
 
+ggplot(data = circle_data, mapping = aes(x = x, y = y)) +
+  geom_point()
 ```
 
-```{r}
+And next calculate the correlation between `x` and `y` in this dataset:
 
+```{r cor-star}
+circle_data %>%
+  summarize(r = cor(x, y))
 ```
+
+Again, we've got similar correlation stats, but very different observations when graphed.
 
 ### Exercise 5
 
